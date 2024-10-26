@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "340504017886",
+    "firebase_url": "https://outpass-4fa6f-default-rtdb.firebaseio.com",
+    "project_id": "outpass-4fa6f",
+    "storage_bucket": "outpass-4fa6f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:340504017886:android:583642b59364d4c3fdbb4f",
+        "android_client_info": {
+          "package_name": "com.example.outpass1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIjLuuzQ5uMNw4cucFNctUhPK3KsL3dDM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:340504017886:android:2411d345b5f7db6ffdbb4f",
+        "android_client_info": {
+          "package_name": "com.example.outpass2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIjLuuzQ5uMNw4cucFNctUhPK3KsL3dDM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
