@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                     String pass1 = document.getString("password");
                     String role1= document.getString("role");
                     if (pass1.equals(password)) {
-                        Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
                         if(role1.equals("warden")){
                             Intent intent1=new Intent(MainActivity.this,WardenActivity.class);
                             startActivity(intent1);
