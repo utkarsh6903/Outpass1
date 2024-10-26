@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         sap = findViewById(R.id.sap);
         pass = findViewById(R.id.pass);
 
+        // ho gaya bhenchooooooooood
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
