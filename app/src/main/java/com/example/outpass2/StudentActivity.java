@@ -37,6 +37,10 @@ public class StudentActivity extends AppCompatActivity {
             startActivity(new Intent(this, MainActivity.class));
             finish();
         }
+        if(id == R.id.studentProfile)
+        {
+            startActivity(new Intent(this, StudentProfilePage.class));
+        }
         return super.onOptionsItemSelected(item);
     }
 

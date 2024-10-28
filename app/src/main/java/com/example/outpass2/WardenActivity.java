@@ -36,6 +36,10 @@ public class WardenActivity extends AppCompatActivity {
             startActivity(new Intent(this, MainActivity.class));
             finish();
         }
+        if(id == R.id.wardenProfile)
+        {
+            startActivity(new Intent(this, WardenProfilePage.class));
+        }
         return super.onOptionsItemSelected(item);
     }
 
