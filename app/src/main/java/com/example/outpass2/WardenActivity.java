@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -18,6 +19,8 @@ import androidx.core.view.WindowInsetsCompat;
 public class WardenActivity extends AppCompatActivity {
 
     TextView tv1;
+    Button btstudents;
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.wardenmenu, menu);
@@ -51,6 +54,9 @@ public class WardenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_warden);
 
         tv1=findViewById(R.id.tv1);
+        btstudents = findViewById(R.id.btstudents);
+
+
 
         Intent intent1=getIntent();
         SharedPreferences sharedPreferences = getSharedPreferences("UserSession", MODE_PRIVATE);

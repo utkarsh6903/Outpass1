@@ -15,4 +15,12 @@
         android:text="Warden"
         android:id="@+id/tv1"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Students"
+        android:id="@+id/btstudents">
+
+    </Button>
+
 </LinearLayout>
