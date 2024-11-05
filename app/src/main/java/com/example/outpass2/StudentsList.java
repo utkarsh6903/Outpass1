@@ -37,7 +37,7 @@ public class StudentsList extends AppCompatActivity {
                     names.add(document.getString("name"));
                     sapids.add(documentId);
                 }
-                CustomBaseAdapter customBaseAdapter = new CustomBaseAdapter(getApplicationContext(),sapids,names);
+                CustomBaseAdapter customBaseAdapter = new CustomBaseAdapter(this,sapids,names);
                 studentsListView.setAdapter(customBaseAdapter);
             }
             else {

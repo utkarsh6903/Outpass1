@@ -2,25 +2,28 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="8dp">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="0.25"
         android:id="@+id/lv_sap"
-        android:textSize="20dp"
-        android:paddingEnd="8dp">
-
-    </TextView>
+        android:textSize="20sp"
+        android:paddingEnd="8dp" />
 
     <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/lv_sname"
+        android:textSize="20sp" />
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/lv_sname"
-        android:textSize="20dp"
-        >
-    </TextView>
-
-
+        android:text="Ban"
+        android:id="@+id/bt_ban" />
 
 </LinearLayout>
