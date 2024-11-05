@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -55,6 +56,14 @@ public class WardenActivity extends AppCompatActivity {
 
         tv1=findViewById(R.id.tv1);
         btstudents = findViewById(R.id.btstudents);
+
+        btstudents.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), StudentsList.class);
+                startActivity(intent);
+            }
+        });
 
 
 
