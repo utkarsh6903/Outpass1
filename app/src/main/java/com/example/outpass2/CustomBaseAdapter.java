@@ -41,7 +41,6 @@ public class CustomBaseAdapter extends BaseAdapter {
         this.context = applicationContext;
         this.inflater = LayoutInflater.from(context);
         this.names = names;
-
     }
 
     @Override
@@ -132,10 +131,6 @@ public class CustomBaseAdapter extends BaseAdapter {
                     db.collection("users").document(sapids.get(position)).set(map, SetOptions.merge()).addOnSuccessListener(t->{
                         Toast.makeText(context, ""+names.get(position)+" is banned for "+x+" days", Toast.LENGTH_SHORT).show();
                     });
-
-
-
-
 
                 })
                 .setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss())
