@@ -5,18 +5,25 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StudentActivity"
+    tools:context=".TimeTable"
     android:orientation="vertical"
     android:gravity="center">
-    <TextView
-        android:layout_width="match_parent"
+    <Spinner
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Student"
-        android:id="@+id/tv1"/>
+        android:entries="@array/year"
+        android:id="@+id/year"/>
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/branch"
+        android:id="@+id/branch"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/bt1"
-        android:text="outing dates"/>
+        android:id="@+id/datepicker"
+        android:text="Select Date"
+        android:onClick="inputDate"/>
+
 
 </LinearLayout>

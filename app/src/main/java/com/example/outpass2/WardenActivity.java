@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -19,7 +20,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class WardenActivity extends AppCompatActivity {
 
     TextView tv1;
-    Button btstudents;
+    Button btstudents,dates;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -55,7 +56,7 @@ public class WardenActivity extends AppCompatActivity {
 
         tv1=findViewById(R.id.tv1);
         btstudents = findViewById(R.id.btstudents);
-
+        dates=findViewById(R.id.dates);
 
 
         Intent intent1=getIntent();
@@ -63,6 +64,13 @@ public class WardenActivity extends AppCompatActivity {
         String sapid = sharedPreferences.getString("sapId", "");
         String role = sharedPreferences.getString("role", "");
         tv1.setText(sapid+" "+role);
+        dates.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent outing=new Intent(getApplicationContext(),TimeTable.class);
+                startActivity(outing);
+            }
+        });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

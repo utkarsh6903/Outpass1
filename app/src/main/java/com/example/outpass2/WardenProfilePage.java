@@ -1,5 +1,7 @@
 package com.example.outpass2;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -24,6 +26,7 @@ public class WardenProfilePage extends AppCompatActivity {
     FirebaseFirestore db;
     Button passChange;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +40,7 @@ public class WardenProfilePage extends AppCompatActivity {
         info = findViewById(R.id.winfo);
         pass = findViewById(R.id.wpass);
         passChange = findViewById(R.id.wpassChange);
+
 
         db.collection("users").document(sapid).get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
@@ -57,6 +61,7 @@ public class WardenProfilePage extends AppCompatActivity {
                 }
             }
         });
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
