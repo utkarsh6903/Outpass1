@@ -8,4 +8,14 @@
         <item> </item>
         <item> </item>
     </string-array>
+    <string-array name="year">
+        <item>1st year</item>
+        <item>2nd year</item>
+        <item>3rd year</item>
+        <item>4th year</item>
+    </string-array>
+    <string-array name="branch">
+        <item>B.Tech</item>
+        <item>MBA Tech</item>
+    </string-array>
 </resources>
