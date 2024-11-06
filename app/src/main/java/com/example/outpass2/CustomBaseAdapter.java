@@ -41,7 +41,6 @@ public class CustomBaseAdapter extends BaseAdapter {
         this.context = applicationContext;
         this.inflater = LayoutInflater.from(context);
         this.names = names;
-
     }
 
     @Override
@@ -70,7 +69,6 @@ public class CustomBaseAdapter extends BaseAdapter {
         lv_sname.setText(names.get(i));
 
         bt_ban.setOnClickListener(v -> {
-            Toast.makeText(context, "hehe", Toast.LENGTH_SHORT).show();
             showBanDialog(i);  // Pass the position to handle the specific item if needed
         });
 
@@ -98,14 +96,11 @@ public class CustomBaseAdapter extends BaseAdapter {
         optionPermanent.setText("Permanent");
         radioGroup.addView(optionPermanent);
 
-        // Create a LinearLayout to hold the RadioGroup and EditText
         LinearLayout layout = new LinearLayout(context);
         layout.setOrientation(LinearLayout.VERTICAL);
         layout.setPadding(50, 20, 50, 20);
         layout.addView(radioGroup);
 
-
-        // Create and show the AlertDialog
         new AlertDialog.Builder(context)
                 .setTitle("Give Ban to "+names.get(position))
                 .setView(layout)
@@ -130,17 +125,12 @@ public class CustomBaseAdapter extends BaseAdapter {
                     {
                         LocalDate currentDate = LocalDate.now();
                         LocalDate newDate = currentDate.plusDays(Long.parseLong(selectedBanDuration));
-                        Toast.makeText(context, ""+newDate, Toast.LENGTH_SHORT).show();
                         map.put("banEndDate",newDate.toString());
                     }
                     final String x = selectedBanDuration;
                     db.collection("users").document(sapids.get(position)).set(map, SetOptions.merge()).addOnSuccessListener(t->{
                         Toast.makeText(context, ""+names.get(position)+" is banned for "+x+" days", Toast.LENGTH_SHORT).show();
                     });
-
-
-
-
 
                 })
                 .setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss())
