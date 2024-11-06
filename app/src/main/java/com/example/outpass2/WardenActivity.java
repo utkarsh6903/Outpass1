@@ -56,7 +56,6 @@ public class WardenActivity extends AppCompatActivity {
 
         tv1=findViewById(R.id.tv1);
         btstudents = findViewById(R.id.btstudents);
-<<<<<<< HEAD
 
         btstudents.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,9 +65,7 @@ public class WardenActivity extends AppCompatActivity {
             }
         });
 
-=======
         dates=findViewById(R.id.dates);
->>>>>>> ut02-11
 
 
         Intent intent1=getIntent();

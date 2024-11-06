@@ -98,10 +98,10 @@ public class TimeTable extends AppCompatActivity {
 
         db.collection("timeTable").document(doc).update("date", FieldValue.arrayUnion(date1))
         .addOnSuccessListener(aVoid -> {
-           Log.d("Firestore", "Array updated successfully!");
+            Toast.makeText(this, "Date Added Successfully", Toast.LENGTH_SHORT).show();
     })
     .addOnFailureListener(e -> {
-        Log.e("Firestore", "Error updating array", e);
+        Toast.makeText(this, "Unsuccessfull", Toast.LENGTH_SHORT).show();
     });
     }
 }
