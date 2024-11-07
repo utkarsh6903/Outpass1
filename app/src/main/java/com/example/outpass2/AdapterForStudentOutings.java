@@ -68,8 +68,6 @@ public class AdapterForStudentOutings extends BaseAdapter {
                 LocalTime currentTime = LocalTime.now();
                 int currentHour = currentTime.getHour();
 
-
-
                 if(!currDate.equals(result))
                 {
                     Toast.makeText(context, "Invalid Outing", Toast.LENGTH_SHORT).show();
@@ -90,7 +88,6 @@ public class AdapterForStudentOutings extends BaseAdapter {
                                 Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
                             });
                 }
-
             }
         });
 

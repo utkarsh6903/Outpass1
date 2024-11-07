@@ -18,12 +18,15 @@ import androidx.core.view.WindowInsetsCompat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 
 import android.app.DatePickerDialog;
 import android.widget.Toast;
 
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.SetOptions;
 
 
 public class TimeTable extends AppCompatActivity {
@@ -95,8 +98,10 @@ public class TimeTable extends AppCompatActivity {
 
 
         String doc=year1+" "+branch1;
+        Map<String,Object> map = new HashMap<>();
+        map.put("date", FieldValue.arrayUnion(date1));
 
-        db.collection("timeTable").document(doc).update("date", FieldValue.arrayUnion(date1))
+        db.collection("timeTable").document(doc).set(map, SetOptions.merge())
         .addOnSuccessListener(aVoid -> {
             Toast.makeText(this, "Date Added Successfully", Toast.LENGTH_SHORT).show();
     })

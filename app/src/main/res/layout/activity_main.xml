@@ -5,27 +5,58 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="?android:attr/windowBackground"
+    tools:context=".MainActivity">
 
-    <EditText
+    <!-- Title TextView -->
+    <TextView
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="32dp" />
+
+    <!-- SAP ID Field -->
+    <EditText
+        android:id="@+id/sap"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="SAP ID"
-        android:id="@+id/sap"/>
+        android:inputType="text"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_background"
+        android:layout_marginBottom="16dp"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/black" />
+
+    <!-- Password Field -->
     <EditText
-        android:layout_width="wrap_content"
+        android:id="@+id/pass"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
-        android:id="@+id/pass"/>
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_background"
+        android:layout_marginBottom="24dp"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/black" />
+
+    <!-- Login Button -->
     <Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="LOGIN"
-    android:id="@+id/bt1"
-    android:onClick="login"/>
-
-
-
+        android:id="@+id/bt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LOGIN"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/primaryColor"
+        android:paddingVertical="12dp"
+        android:layout_marginTop="8dp"
+        android:onClick="login"
+        android:textAllCaps="true"
+        android:fontFamily="sans-serif-medium" />
 </LinearLayout>
