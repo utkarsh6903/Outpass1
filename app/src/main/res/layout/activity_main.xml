@@ -11,7 +11,6 @@
     android:background="?android:attr/windowBackground"
     tools:context=".MainActivity">
 
-    <!-- Title TextView -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,7 +19,6 @@
         android:textColor="@color/black"
         android:layout_marginBottom="32dp" />
 
-    <!-- SAP ID Field -->
     <EditText
         android:id="@+id/sap"
         android:layout_width="match_parent"
@@ -31,9 +29,10 @@
         android:background="@drawable/edit_text_background"
         android:layout_marginBottom="16dp"
         android:textColorHint="@color/gray"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
 
-    <!-- Password Field -->
     <EditText
         android:id="@+id/pass"
         android:layout_width="match_parent"
@@ -44,9 +43,10 @@
         android:background="@drawable/edit_text_background"
         android:layout_marginBottom="24dp"
         android:textColorHint="@color/gray"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
 
-    <!-- Login Button -->
     <Button
         android:id="@+id/bt1"
         android:layout_width="match_parent"
@@ -58,5 +58,7 @@
         android:layout_marginTop="8dp"
         android:onClick="login"
         android:textAllCaps="true"
-        android:fontFamily="sans-serif-medium" />
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
 </LinearLayout>
